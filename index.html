@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kirill Glushakov CV</title>
+    <title>Kirill Glushakov — Senior Full Stack Engineer</title>
+    <meta name="description" content="Kirill Glushakov, Senior Full Stack Engineer: Node.js / NestJS, TypeScript, React / Next.js, PostgreSQL, Web3, LLM. Serbia, remote or on-site.">
 </head>
 
 
 <body>
     <div class="andru">
         <div class="text">
-            <h1>🤑 Kirill Glushakov <br />(Senior Backend Engineer)</h1>
-            <!-- <h3>Born in Russia, but now I live in Serbia 🇷🇸</h3> -->
+            <h1>🤑 Kirill Glushakov <br />(Senior Full Stack Engineer)</h1>
+            <h3>Node.js / NestJS · TypeScript · React / Next.js · PostgreSQL · Web3 · LLM</h3>
+            <p class="location">Serbia · Remote or on-site</p>
             <div class="bths">
                 <a class="btn" href="https://sijuz.t.me" target="_blank">Telegram</a>
                 <a class="btn" href="https://www.linkedin.com/in/sijuz/" target="_blank">LinkedIn</a>
@@ -25,107 +27,80 @@
         <h1>👀 About me</h1>
         <div class="block">
             <p>
-                Hi, I'm a Senior Backend Engineer with 7+ years building scalable, high-load web applications and distributed backend systems across fintech and AI. I've architected microservices platforms handling 2,000+ concurrent processes at 500+ RPS, optimized storage for 100M+ records, and built secure financial applications serving 6M+ users. I work primarily with Node.js, NestJS, TypeScript, PostgreSQL, Docker, and Kubernetes, and enjoy system architecture, technical decision-making, and mentoring.
+                Full-stack engineer with 8 years of experience in payments, Web3 and AI products, from architecture to production. Built NestJS and PostgreSQL backends handling 500+ RPS, grew products in an ecosystem of 6M+ users and a Telegram game with 967K sign-ups in 100 days, and integrated government and payment systems. I work with AI coding agents (Cursor, Claude Code, Codex) and review every decision myself.
             </p>
         </div>
         <h1>🥰 Work experience</h1>
         <div class="block">
             <div class="experience-item">
-                <h3><a href="https://soda.ai" target="_blank">SODA.AI</a> – Senior Backend Engineer</h3>
+                <h3>SODA.AI – Senior Backend Engineer</h3>
                 <p class="duration">Dec 2023 – Present</p>
+                <p class="context">AI game generation platform for Telegram Mini Apps on TON and Solana, plus adjacent products: a gaming goods marketplace and B2B integrations with government systems. Team of 8; owned the backend architecture.</p>
                 <ul>
-                    <li>Architected and scaled a microservices platform for AI-powered game generation, supporting 2,000+ concurrent games at 500+ RPS.</li>
-                    <li>Engineered an AI code-generation pipeline using OpenAI APIs and prompt orchestration, automating game-content creation that was previously done by hand.</li>
-                    <li>Optimized data storage and analytics for 100M+ records using TimescaleDB hypertables and continuous aggregates to keep analytical queries fast at scale.</li>
-                    <li>Configured Kubernetes auto-scaling on application-specific metrics, right-sizing pods to cut over-provisioned compute and lower cloud costs.</li>
-                    <li>Designed and maintained 4+ backend services with NestJS, Redis, and PostgreSQL in a distributed microservices environment.</li>
-                    <li>Drove backend code quality through unit, integration, and end-to-end testing with Jest, reaching 80%+ test coverage.</li>
+                    <li>Designed a NestJS microservices platform serving 500+ RPS and 2,000+ concurrent games; set up Kubernetes autoscaling on application metrics.</li>
+                    <li>Built the LLM game generation pipeline: a two-stage flow (analyze and plan changes → apply them to the code), WebSocket streaming, game versions in S3 with rollback, payments in Telegram Stars.</li>
+                    <li>Built the backend of a no-code Solana mini-game builder solo in 5 months: Anchor program indexer, candles in 9 timeframes and a TradingView-compatible charting API.</li>
+                    <li>Optimized storage and analytics for 100M+ game and trading event records in TimescaleDB.</li>
+                    <li>Became the main author of a TON launchpad backend: blockchain scanner with failover across 3 RPC providers, automatic token listing on DeDust after a sale, CI/CD to DigitalOcean for 4 environments.</li>
+                    <li>Led the frontend of a gaming goods marketplace on Next.js 16 and React 19 from the first commit to production on 6 domains; as release engineer, merged 1,000+ changes in a team of 7 developers.</li>
+                    <li>Reconciled 1,085 paid marketplace orders ($15.3K in 3 weeks) against web analytics, found that 56% of purchases went untracked and designed server-side event delivery.</li>
+                    <li>Integrated a marketplace seller's back office with the government product labeling system and e-document exchange: code ordering, withdrawal from circulation for FBS orders, invoice reconciliation; 75K codes in production.</li>
                 </ul>
-                <p class="tech-stack"><b>Tech Stack:</b> NestJS, OpenAI API, PostgreSQL, TimescaleDB, Redis, Kubernetes, Docker</p>
+                <p class="tech-stack"><b>Tech Stack:</b> NestJS, TypeScript, PostgreSQL, TimescaleDB, Redis, Kubernetes, Docker, Next.js, React, Solana, TON, OpenAI / Anthropic / Gemini API, GitHub Actions, GitLab CI, DigitalOcean, OpenTelemetry, Sentry</p>
             </div>
-
             <div class="experience-item">
                 <h3><a href="https://delab.team" target="_blank">DeLab</a> – Senior Full Stack Engineer</h3>
                 <p class="duration">Oct 2022 – Nov 2023 (1 year 2 months)</p>
+                <p class="context">Web3 studio: a TON product ecosystem in Telegram (wallet, VPN, eSIM, donations, games) and partner projects. Team of about 10; assigned tasks and ran code reviews.</p>
                 <ul>
-                    <li>Built a secure financial application for 6M+ users, implementing PBKDF2 encryption and client-side key management.</li>
-                    <li>Developed real-time transaction processing and analytics services with Node.js and TypeScript for high-load financial applications.</li>
-                    <li>Delivered 4 distinct products to production in 9 months – fintech, VPN, and analytics – using React, Node.js, and PostgreSQL.</li>
-                    <li>Created backend APIs and frontend interfaces for high-load financial applications used across the product suite.</li>
-                    <li>Owned architecture, implementation, deployment, and post-release support across four production products.</li>
+                    <li>Laid out the architecture of DeWallet, a non-custodial TON wallet as a Chrome extension and Telegram Mini App: client-side AES encryption of the mnemonic, TonConnect bridge; listed in the official TON wallets-list, ecosystem of 6M+ users.</li>
+                    <li>Wrote the DeVPN backend alone in 3 weeks: Outline server fleet management, Telegram initData auth, payments in TON and 10 jettons with automatic subscription activation.</li>
+                    <li>Owned payouts for a Telegram game with its own token: 967K sign-ups in 100 days, peak of 103K per day, $71K paid out in batches via BullMQ.</li>
+                    <li>Built TON payment intake: a block indexer with a persistent cursor, auto-sweep to a hot wallet and a withdrawal worker, plus TonAPI scanners reused in the VPN, eSIM service and games.</li>
+                    <li>For partners, built the blockchain layer of the Libermall NFT marketplace (Tegro) with a port of 5 Getgems contracts, and the frontend of the on-chain game Crazy Portals on Everscale and Venom.</li>
+                    <li>Main author of the npm library @delab-team/ton-network-react for calling and deploying TON contracts from the browser via TonConnect.</li>
                 </ul>
-                <p class="tech-stack"><b>Tech Stack:</b> React, Node.js, TypeScript, PostgreSQL, REST APIs</p>
+                <p class="tech-stack"><b>Tech Stack:</b> TypeScript, Node.js, Express, React, PostgreSQL, Redis, BullMQ, Python (FastAPI), TON (TonConnect, blueprint, FunC contract integration), Everscale, Venom, IPFS</p>
             </div>
-
             <div class="experience-item">
                 <h3><a href="https://github.com/polus-dev" target="_blank">Polus</a> – Middle Backend Engineer</h3>
                 <p class="duration">Jul 2021 – Sep 2022 (1 year 3 months)</p>
+                <p class="context">DeFi projects on TON and EVM: DEX, crypto payment gateway, wallet, mining pool, NFT marketplace.</p>
                 <ul>
-                    <li>Developed backend services for trading platforms and real-time monitoring systems used across the business.</li>
-                    <li>Built an order-book trading platform handling 200+ requests per second with sub-second latency.</li>
-                    <li>Launched a monitoring platform for 30,000+ connected devices with real-time telemetry and alerting.</li>
-                    <li>Integrated backend services with 10+ financial systems and third-party APIs for high-availability applications.</li>
+                    <li>Built the trading interface of the first order-book DEX on TON (BiTON) with an order book and charts; the platform handled 200+ RPS with sub-second latency.</li>
+                    <li>Built the Polus Pay checkout: payment with any of 12 tokens across 3 EVM networks in a single transaction via Uniswap V3.</li>
+                    <li>Sole author of the merchant dashboard (webhooks, API keys, domain verification) and a browser EVM wallet for 3 networks.</li>
+                    <li>Built a TON → USDC cross-chain exchange on Polygon: TON block scanner and payouts through a custom Solidity contract with EIP-1559 gas pricing.</li>
+                    <li>Wrote the TON mining pool backend: PoW task distribution, result accounting, payouts, GPU miner adaptation in C++ / OpenCL; monitoring of 30,000+ devices with telemetry and alerts.</li>
                 </ul>
-                <p class="tech-stack"><b>Tech Stack:</b> React, Node.js, TypeScript, WebSockets, PostgreSQL</p>
+                <p class="tech-stack"><b>Tech Stack:</b> Node.js, TypeScript, React, Vue / Nuxt, ethers.js, wagmi, Uniswap SDK, Solidity, TON, C++ / OpenCL, Docker, GitHub Actions</p>
             </div>
-
             <div class="experience-item">
-                <h3>Cyber Donate – Full Stack Engineer</h3>
+                <h3>Cyber Donate – Middle Full Stack Engineer</h3>
                 <p class="duration">Sep 2018 – Jun 2021 (2 years 10 months)</p>
+                <p class="context">Payment and donation services, apps for VK Mini Apps.</p>
                 <ul>
-                    <li>Implemented payment solutions for online platforms, including third-party API integrations, backend services, and transaction reconciliation flows.</li>
-                    <li>Designed modular backend components that improved maintainability and sped up delivery of new features.</li>
-                    <li>Delivered end-to-end full-stack payment features across frontend and backend systems for 5+ live products.</li>
-                    <li>Managed and grew 10+ key client accounts, contributing to 25% company revenue growth over the period.</li>
+                    <li>Built a donation and payment service: PHP backend with a WebSocket server and QIWI, Python REST API, an embeddable JS SDK for the checkout window; about 5K users.</li>
+                    <li>Launched CryptoM, a VK mining game: 194K users, 5.8K payments and 2.6K payouts via QIWI.</li>
+                    <li>Shipped 20+ VK Mini Apps on React and VKUI.</li>
                 </ul>
-                <p class="tech-stack"><b>Tech Stack:</b> JavaScript (Node.js, React), Microservices, Payment Gateway APIs, Security Protocols</p>
+                <p class="tech-stack"><b>Tech Stack:</b> JavaScript, React, VKUI, PHP, Python (Flask), MySQL, Redis, Docker, GitLab CI</p>
             </div>
         </div>
 
         <h1>😳 My skills</h1>
         <div class="block">
-            <p><b>Backend:</b></p>
-            <ul>
-                <li>Node.js, NestJS, Express.js, Fastify, TypeScript/JavaScript</li>
-                <li>REST API, Microservices, JWT Authentication, TypeORM</li>
-            </ul>
-
-            <p><b>Frontend:</b></p>
-            <ul>
-                <li>React, Next.js, TypeScript, JavaScript, Redux</li>
-                <li>Tailwind CSS, Responsive UI Development</li>
-            </ul>
-
-            <p><b>Databases:</b></p>
-            <ul>
-                <li>PostgreSQL, TimescaleDB, Redis, MongoDB</li>
-                <li>SQL Query Optimization</li>
-            </ul>
-
-            <p><b>Infrastructure & DevOps:</b></p>
-            <ul>
-                <li>Docker, Kubernetes, AWS, Nginx, Linux</li>
-                <li>CI/CD, GitHub Actions, High-load Systems (500+ RPS)</li>
-            </ul>
-
-            <p><b>Testing:</b></p>
-            <ul>
-                <li>Jest, Unit / Integration / E2E Testing, Postman</li>
-            </ul>
-
-            <p><b>AI & Automation:</b></p>
-            <ul>
-                <li>OpenAI API Integration, AI-powered Code Generation, Prompt Orchestration</li>
-            </ul>
-
-            <p><b>Domains:</b> Fintech, Payments, High-Load Systems, AI / LLM Integration</p>
-            <p><b>Tools:</b> VS Code, Git, Figma, Jira, Linux, macOS, Windows, etc.</p>
+            <p><b>Backend:</b> Node.js, NestJS, TypeScript, Express, PostgreSQL, TimescaleDB, Redis, BullMQ, WebSocket / Socket.IO, REST, Swagger, Python (FastAPI)</p>
+            <p><b>Frontend:</b> React, Next.js (App Router, Server Actions), Redux Toolkit, TanStack Query, Tailwind, Vue / Nuxt, Telegram Mini Apps</p>
+            <p><b>Web3:</b> TON (TonConnect, blueprint, jettons, NFT), Solana (Anchor, web3.js), EVM (ethers, wagmi, Uniswap SDK, Permit2, Solidity)</p>
+            <p><b>AI / LLM:</b> OpenAI, Anthropic, Gemini API; structured outputs, streaming, prompt pipelines, token cost tracking; Cursor, Claude Code, Codex, MCP</p>
+            <p><b>Infrastructure and quality:</b> Docker, Kubernetes, GitHub Actions, GitLab CI, DigitalOcean, nginx, OpenTelemetry, New Relic, Sentry, Jest, Vitest</p>
         </div>
         <h1>👨‍🎓 Education</h1>
         <div class="block">
             <p>
                 <b>Sergiyev Posad Humanitarian Institute</b><br />
-                2018 – 2020
+                2018 – 2020, Secondary Specialized Degree in Law
             </p>
         </div>
 
@@ -134,7 +109,7 @@
         <div class="block">
             <p>
                 - Russian (native).<br />
-                - English (B1).
+                - English (B1): documentation, written communication, issue trackers.
             </p>
         </div>
         <h1>Thank you for your attention!</h1>
@@ -232,6 +207,24 @@
             font-size: 14px;
             margin: 0 0 16px 0 !important;
             font-style: italic;
+        }
+
+        .text h3 {
+            margin: 4px 0 0 0;
+            font-weight: 500;
+            color: #c9c9d6 !important;
+        }
+
+        .location {
+            margin: 4px 0 16px 0;
+            color: #9ca3af !important;
+        }
+
+        .context {
+            margin: 0 0 8px 0 !important;
+            color: #c9c9d6 !important;
+            font-size: 15px;
+            line-height: 23px;
         }
 
         .responsibilities, .achievements {
